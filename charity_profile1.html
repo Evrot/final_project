@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Profile 1</title>
+    <link rel="stylesheet" href="final_project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="topnav">
+        <a href="#" class="split" >HelpHub</a>
+        <a href="charities.html"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;Charities</a>  
+        <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>              
+    </div>
+    <div class="content">
+        <h1>God of Alliance</h1>
+        <p>
+            was created by a Brazilian Christian group and today it is preaching the word of God and helping needy communities in more than 40 countries. If you would like to JOIN US, just fill the form below!
+        </p>
+    </div>
+    <form id="myForm">
+        <table>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" name="Name" required oninvalid="this.setCustomValidity('Please enter your name.')" oninput="this.setCustomValidity('')">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    E-mail:
+                </td>
+                <td>
+                    <input type="email" name="E-mail" required oninvalid="this.setCustomValidity('Please enter your email.')" oninput="this.setCustomValidity('')">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Age:
+                </td>
+                <td>
+                    <input type="text" name="Age" maxlength="3" required oninvalid="this.setCustomValidity('Please enter your age.')" oninput="this.setCustomValidity('')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Your reasons:
+                </td>
+                <td>
+                    <textarea name="Message" placeholder="type your reasons..." rows="10" cols="40" maxlength="500" required oninvalid="this.setCustomValidity('Please provide your reasons.')" oninput="this.setCustomValidity('')"></textarea>
+                </td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Submit">
+    </form>    
+    
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirm Submission</h2>
+            <div id="formContent"></div>
+            <button id="confirmBtn">Confirm & Submit</button>
+        </div>
+    </div>
+    <script src="charity_profile.js"></script>
+</body>
+</html>

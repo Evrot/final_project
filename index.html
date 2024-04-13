@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project Web Dev</title>
+    <link rel="stylesheet" href="final_project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body >
+    <div class="topnav">
+        <a href="#" class="split" >HelpHub</a>
+        <a href="charities.html"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;Charities</a>  
+        <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>              
+    </div>
+    <div class="contentidx">
+        <h1>We are HelpHub!</h1>
+        <p>
+            We are a non-governmental organization, which aims to connect people<br> who are willing to volunteer  and cooperate with charities that are in need at<br> the moment. Making the world better and better, one step at a time,<br> that's HelpHub's mission. Join us!
+        </p>
+        <p id="bibleVerse"  style="padding-top: 40px;">
+        </p>
+        <p>
+            Psalm 23:4
+        </p>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 HelpHub. All rights reserved.</p>
+            <h3>Email: helphub@gov.com.br</h3>
+            <h3>Number: (123)456-7890</h3>
+        </div>
+    </footer>
+    
+    <script>
+        fetch('https://bible-api.com/psalm 23:4')
+            .then(response => response.json())
+            .then(data => {
+                const bibleVerse = data.text;
+                document.getElementById('bibleVerse').innerText = bibleVerse;
+            })
+            .catch(error => console.error('Error fetching Bible verse:', error));
+    </script>
+</body>
+</html>
